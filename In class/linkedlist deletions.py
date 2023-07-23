@@ -55,7 +55,17 @@ class Single_LinkedList:
                 temp = temp.next
                 pos = pos + 1
         temp.next = temp.next.next
-        
+    
+    def updates(self,x,data):
+        temp = self.head
+        pos = 1
+        while temp.next is not None:
+            if pos == (x-1):
+                break
+            else:
+                temp = temp.next
+                pos = pos + 1
+        temp.next.data = data
         
         
         
@@ -74,4 +84,5 @@ L.beg_del()
 L.end_del()
 L.mid_del_value(40)
 L.mid_del_pos(3)
+L.updates(3,40)
 L.printSLL()
