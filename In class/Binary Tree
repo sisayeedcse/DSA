@@ -35,9 +35,9 @@ def search_BST(root,item):
     if root is None or item == root.data:
         return root
     elif item < root.data:
-        return search_BST(root.left,item)
+        return search_BST(root.left_child,item)
     else:
-        return search_BST(root.right,item)
+        return search_BST(root.right_child,item)
 
 root = T(5)
 insert_BST(root,10)
