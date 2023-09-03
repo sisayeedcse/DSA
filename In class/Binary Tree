@@ -1,0 +1,56 @@
+class T:
+    def __init__(self,data):
+        self.data = data
+        self.left_child = None
+        self.right_child = None
+
+def insert_BST(root,val):
+    if root is None:
+        return T(val)
+    elif val < root.data:
+        root.left_child = insert_BST(root.left_child,val)
+    elif val > root.data:
+        root.right_child = insert_BST(root.right_child,val)
+    return root
+
+def inorder_tree(root):
+    if root:
+        inorder_tree(root.left_child)
+        print(root.data)
+        inorder_tree(root.right_child)
+
+def preorder_tree(root):
+    if root:
+        print(root.data)
+        preorder_tree(root.left_child)
+        preorder_tree(root.right_child)
+
+def postorder_tree(root):
+    if root:
+        postorder_tree(root.left_child)
+        postorder_tree(root.right_child)
+        print(root.data)
+
+def search_BST(root,item):
+    if root is None or item == root.data:
+        return root
+    elif item < root.data:
+        return search_BST(root.left,item)
+    else:
+        return search_BST(root.right,item)
+
+root = T(5)
+insert_BST(root,10)
+insert_BST(root,15)
+insert_BST(root,1)
+insert_BST(root,25)
+
+# root.left_child = T(5)
+# root.right_child = T(15)
+# inorder_tree(root)
+preorder_tree(root)
+# postorder_tree(root)
+if search_BST(root,150) is None:
+    print("Value not found!")
+else:
+    print("value found!")
