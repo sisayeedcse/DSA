@@ -1,3 +1,5 @@
+#------------------ Array Traversing -------------- 
+
 def Traversing(LA,N):
     K = 0
     print("The Linear array is:",end= " ")
@@ -5,6 +7,8 @@ def Traversing(LA,N):
         print(LA[K], end =" ")
         K = K + 1
     print("\n")
+    
+#------------------ Array Insertion -------------- 
 
 def Insertion(LA,N,ITEM,K):
     LA.append(None)
@@ -17,6 +21,8 @@ def Insertion(LA,N,ITEM,K):
     res = print("The list after insertion is- ",LA,"\n")
     return res
 
+#------------------ Array Deletion --------------
+
 def Deletion(LA,N,ITEM,K):
     J = K
     while J < N -1:
@@ -27,6 +33,8 @@ def Deletion(LA,N,ITEM,K):
     res = print("The list after Deletion- ",LA,"\n")
     return res
 
+#------------------ Linear Search -------------- 
+
 def LINERSEARCH(LA,ITEM,N):
     LOC = 1
     while LOC <= N:
@@ -35,6 +43,7 @@ def LINERSEARCH(LA,ITEM,N):
             break
         LOC = LOC + 1
 
+#------------------ Binary Search -------------- 
 def BinarySearch(LA,ITEM,N):
     BEG = 0
     END = N - 1 
