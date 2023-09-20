@@ -10,9 +10,7 @@ def Traversing(LA,N):
 
 LA = [10,20,30,40,50,60,70,80,90,100]
 N = len(LA)
-ITEM = 50
-K = 2
-Traversing(LA,N)    
+Traversing(LA,N)
 #------------------ Array Insertion -------------- 
 
 def Insertion(LA,N,ITEM,K):
@@ -61,7 +59,6 @@ def LINERSEARCH(LA,ITEM,N):
 LA = [10,20,30,40,50,60,70,80,90,100]
 N = len(LA)
 ITEM = 50
-K = 2
 LINERSEARCH(LA,ITEM,N)
 
 #------------------ Binary Search -------------- 
@@ -83,5 +80,4 @@ def BinarySearch(LA,ITEM,N):
 LA = [10,20,30,40,50,60,70,80,90,100]
 N = len(LA)
 ITEM = 50
-K = 2
 BinarySearch(LA,ITEM,N)
